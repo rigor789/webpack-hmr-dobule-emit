@@ -15,7 +15,7 @@ class WatchStatePlugin {
         Array.from(compiler.modifiedFiles).forEach((file) => {
           console.log("-".repeat(100));
           console.log(
-            `\u001b[33m[${id}][WatchTriggers] MODIFIED: ${file}\u001b[0m`
+            `\u001b[33m[${performance.now()}][${id}][WatchTriggers] MODIFIED: ${file}\u001b[0m`
           );
           console.log("-".repeat(100));
         });
@@ -25,7 +25,7 @@ class WatchStatePlugin {
         Array.from(compiler.removedFiles).forEach((file) => {
           console.log("-".repeat(100));
           console.log(
-            `\u001b[33m[${id}][WatchTriggers] REMOVED: ${file}\u001b[0m`
+            `\u001b[33m[${performance.now()}][${id}][WatchTriggers] REMOVED: ${file}\u001b[0m`
           );
           console.log("-".repeat(100));
         });
@@ -54,7 +54,7 @@ module.exports = {
     clean: true,
   },
   watchOptions: {
-    // aggregateTimeout: 100,
+    // aggregateTimeout: 500,
   },
   module: {
     rules: [
