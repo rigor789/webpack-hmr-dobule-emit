@@ -7,3 +7,5 @@ Steps to reproduce:
 3. `yarn build --watch`
 4. make a change in `src/app.js` to trigger HMR
 5. observe logs, compilation counter is at 3 instead of 2
+
+![](output.png)

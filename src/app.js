@@ -1,3 +1,2 @@
 // change the text to trigger HMR
-console.log(`
-`)
+console.log(``)
