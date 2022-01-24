@@ -6,7 +6,6 @@ class WatchStatePlugin {
     const id = `WatchStatePlugin`;
     let count = 1;
     let isWatchMode = false;
-    let prevAssets = [];
 
     compiler.hooks.watchRun.tapAsync(id, function (compiler, callback) {
       callback();
@@ -37,10 +36,8 @@ class WatchStatePlugin {
       callback();
 
       console.log("-".repeat(100));
-      console.log("Compilation counter: ", count++);
+      console.log("Compilation counter: ", count++, "Hash: ", compilation.hash);
       console.log("-".repeat(100));
-
-      return;
     });
   }
 }
